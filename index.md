@@ -1,37 +1,32 @@
-## Welcome to GitHub Pages
+## Welcome to RobinXYuan Rails Notebook
 
-You can use the [editor on GitHub](https://github.com/RobinXYuanBlog/RubyOnRailsNotes/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+## Start an Application
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Controllers and Views
 
-### Markdown
+### Create Controllers
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```Ruby
+> rails g controller greeter hello
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+Then, go to ```project_dir/views/greeter/hello.html.erb```
 
-### Jekyll Themes
+*erb* => Embeded Ruby
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/RobinXYuanBlog/RubyOnRailsNotes/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+ERB is a templating library (Similary to JSP, for example) that lets you embeded Ruby into your HTML file.
 
-### Support or Contact
+### Change Views
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Then, in the *hello.html.erb* file, write
+
+```Ruby
+<% random_names = ["Alex", "Joe", "Michael"] %>
+<h1>Greetings, <%= random.names.sample %></h1>
+<p>The time now is <%= Time.now %></p>
+```
+
+<% ...Ruby codes... %> - Evaluate Ruby code
+<%= ...Ruby codes... %> - Output evaluated Ruby code
+
+
